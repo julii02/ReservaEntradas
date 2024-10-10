@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "6d47903a-89d6-4be0-a426-0031b8f375c5",
+		"name": "Entradas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37975331"
+	},
+	"item": [
+		{
+			"name": "guardar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdUsuario\" : 6,\r\n    \"nombre\" : \"maria\",\r\n    \"apellido\" : \"pepe\",\r\n    \"email\" : \"mari@gmail.com\",\r\n    \"telefono\" : \"1122335577\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/usuario/guardar"
+			},
+			"response": []
+		},
+		{
+			"name": "traer usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/usuario/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "editar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pepe\",\r\n    \"apellido\": \"Gonzalo\",\r\n    \"email\": \"Gonza@gmail.com\",\r\n    \"telefono\": \"1122335577\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/usuario/editar/1"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/usuario/borrar/3"
+			},
+			"response": []
+		},
+		{
+			"name": "traer eventos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/evento/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "guardar evento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Partido seleccion\",\r\n    \"descripcion\": \"Un increíble partido de futbol.\",\r\n    \"fechaInicio\": \"2024-12-15T20:00:00\",\r\n    \"fechaFin\": \"2024-12-15T23:00:00\",\r\n    \"capacidadTotal\": 2,\r\n    \"capacidadDisponible\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/evento/guardar"
+			},
+			"response": []
+		},
+		{
+			"name": "guardar entrada",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"precio\": 1000,\r\n  \"categoriaEntrada\": \"VIP\",\r\n  \"evento\": {\r\n    \"idEvento\": 2\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 7\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/entrada/guardar"
+			},
+			"response": []
+		},
+		{
+			"name": "traer entradas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/entrada/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "guardar pago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monto\": 1000,\r\n    \"fechaPago\": \"2024-10-08T15:30:00\",\r\n    \"metodoPago\": \"Tarjeta de crédito\",\r\n    \"entrada\": {\r\n        \"idEntrada\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/pago/guardar"
+			},
+			"response": []
+		},
+		{
+			"name": "traer pagos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/pago/traer"
+			},
+			"response": []
+		},
+		{
+			"name": "borrar entrada",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/entrada/borrar/2"
+			},
+			"response": []
+		},
+		{
+			"name": "editar entrada",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"precio\": 1500,\r\n  \"categoriaEntrada\": \"Normal\",\r\n  \"evento\": {\r\n    \"idEvento\": 2\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 7\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/entrada/editar/1"
+			},
+			"response": []
+		},
+		{
+			"name": "editar evento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Concierto de tenis\",\r\n        \"descripcion\": \"Increible partido de tenis.\",\r\n        \"fechaInicio\": \"2024-12-15T20:00:00\",\r\n        \"fechaFin\": \"2024-12-15T23:00:00\",\r\n        \"capacidadTotal\": 500,\r\n        \"capacidadDisponible\": 500\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/evento/editar/2"
+			},
+			"response": []
+		}
+	]
+}
